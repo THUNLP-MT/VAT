@@ -1,15 +1,11 @@
 # Visual Abstract Thinking Empowers Multimodal Reasoning
 
-This repository contains the official codebase for the paper "Visual Abstract Thinking Empowers Multimodal Reasoning".
-
 <div align="center">
 
-<!-- Project Banner -->
 <img src="https://github.com/ironmt/picx-images-hosting/raw/master/fig1-ooo-44-manual-v6-1.4n7y6yzdg7.webp" alt="Visual Abstract Thinking Overview" width="90%"/>
 
-<!-- Badges -->
 <br><br>
-<a href="https://github.com/THUNLP-MT/VAT"><img src="https://img.shields.io/badge/Project-Homepage-green" alt="Project Homepage"></a>
+<!-- <<a href="https://github.com/THUNLP-MT/VAT"><img src="https://img.shields.io/badge/Project-Homepage-green" alt="Project Homepage"></a> -->
 <a href="https://arxiv.org/abs/2505.20164"><img src="https://img.shields.io/badge/arXiv-2505.20164-red" alt="arXiv"></a>
 <img src="https://visitor-badge.laobi.icu/badge?page_id=THUNLP-MT/VAT" alt="visitors">
 
