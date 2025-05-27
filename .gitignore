@@ -1,15 +1,18 @@
+# 忽略所有内容
+*
+
+!.gitignore
 !calc.py
+!README.md
+!run.sh
 
-*.log
-*.pth
+!img2abs/
+!img2abs/**
 
-!img2abs/*.py
 !baselines/cot/*.py
 !vat/*.py
 !baselines/standard/*.py
 !baselines/*.sh
-!img2abs/
-!README.md
-*
 
-!.gitignore
+*.log
+*.pth
