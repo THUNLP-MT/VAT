@@ -12,10 +12,10 @@ import re
 from PIL import Image
 from typing import Dict, Any
 
-sk_type = os.getenv("sk_type", "open")
-if sk_type == "binary":
-    from tools import binary as sketch
-elif sk_type == "canny":
+ABS_TYPE = os.getenv("ABS_TYPE", "open")
+if ABS_TYPE == "binary":
+    from VAT.tools import binary as sketch
+elif ABS_TYPE == "canny":
     from tools import canny as sketch
 else:
     from tools import sketch

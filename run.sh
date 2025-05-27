@@ -1,9 +1,14 @@
 #!/bin/bash
 
-sk_types=("open") 
+ABS_TYPEs=("open") 
 models=("gpt-4o" "gemini") 
 
 commands=(
+  "python run_task.py --task angle"
+  "python run_task.py --task diff"
+  "python run_task.py --task rot-ang"
+  "python run_task.py --task direction"
+  "python run_task.py --task dif-ang"
   "python run_task.py --task blink_spatial"
   "python run_task.py --task blink_counting"
   "python run_task.py --task vd_illusion"
@@ -25,12 +30,12 @@ for folder in "${folders[@]}"; do
   cd "$folder" || exit
   echo "Running tasks in $folder"
 
-  for sk in "${sk_types[@]}"; do
-    echo "Using sk_type: $sk"
+  for sk in "${ABS_TYPEs[@]}"; do
+    echo "Using ABS_TYPE: $sk"
     for model in "${models[@]}"; do
       echo "Using model: $model"
       for cmd in "${commands[@]}"; do
-        full_cmd="MODEL=$model sk_type=$sk $cmd &"
+        full_cmd="MODEL=$model ABS_TYPE=$sk $cmd"
         echo "Running: $full_cmd"
         eval sleep 1
         eval "$full_cmd"

@@ -33,14 +33,14 @@ config_to_env_vars()
 
 TIME = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
 
-sk_type = os.getenv("sk_type", "open")
+ABS_TYPE = os.getenv("ABS_TYPE", "open")
 model_info = llm_config["config_list"][0]["model"]
 
 def set_log():
 
     log_dir = "log"
     os.makedirs(log_dir, exist_ok=True)
-    log_filename = os.path.join(log_dir, f"{args.task}_{model_info}_{sk_type}_{TIME}.log")
+    log_filename = os.path.join(log_dir, f"{args.task}_{model_info}_{ABS_TYPE}_{TIME}.log")
 
     logging.basicConfig(
         filename=log_filename,
@@ -67,7 +67,7 @@ def set_log():
 
 def run_task(task, output_dir, task_name=None):
     all_task_instances = glob.glob(f"../../tasks/{task}/processed/*/")
-    output_dir = os.path.join(output_dir, f"{task_name}_{model_info}_{sk_type}_{TIME}")
+    output_dir = os.path.join(output_dir, f"{task_name}_{model_info}_{ABS_TYPE}_{TIME}")
     for task_instance in tqdm(all_task_instances[:]):
         print(f"Running task instance: {task_instance}")
         run_agent(task_instance, output_dir, task_name=task_name)

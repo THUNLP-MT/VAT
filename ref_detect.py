@@ -53,15 +53,3 @@ def draw_circles_on_image(image: Image.Image, circles):
         
     return image
 
-if __name__ == "__main__":
-    image_name = "image1.jpg"
-    image_path = f"/disks/disk6/private/ldr/SketchOfThought/agent/outputs/blink_semcorr_ref1/val_Semantic_Correspondence_10/image1.jpg"
-    save_path = f"/disks/disk6/private/ldr/SketchOfThought/agent/edge1.jpg"
-    img = Image.open(image_path)
-    circles = detect_red_circles(img)
-    print(circles)
-    print(f"Detected {len(circles)} red circles.")
-
-    tu = draw_circles_on_image(img, circles)
-    tu.save(save_path)
-

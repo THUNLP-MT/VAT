@@ -11,18 +11,18 @@ from pathlib import Path
 import sys
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 
-from cycle_detect import *
+from ref_detect import *
 from config import ANIME_ADDRESS, CONTOUR_ADDRESS, OPEN_ADDRESS, PS_ADDRESS, ADD_DOT
 
 
-sk_type = os.getenv("sk_type", "open")
-if sk_type == "ps":
+ABS_TYPE = os.getenv("ABS_TYPE", "open")
+if ABS_TYPE == "ps":
     sk_client = Client(PS_ADDRESS)
-elif sk_type == "anime":
+elif ABS_TYPE == "anime":
     sk_client = Client(ANIME_ADDRESS)
-elif sk_type == "contour":
+elif ABS_TYPE == "contour":
     sk_client = Client(CONTOUR_ADDRESS)
-elif sk_type == "open":
+elif ABS_TYPE == "open":
     sk_client = Client(OPEN_ADDRESS)
 
 def canny(image: Image.Image, low_threshold: int = 50, high_threshold: int = 200) -> Image.Image:

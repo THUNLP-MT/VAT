@@ -38,7 +38,6 @@ def env_vars_to_config() -> Dict[str, Any]:
     
     return llm_config
 
-
 def to_data_uri(path: str) -> str:
     mime, _ = mimetypes.guess_type(path)
     mime = mime or "image/jpeg"

@@ -5,6 +5,9 @@
 !README.md
 !run.sh
 !config.py
+!tools.py
+!utils.py
+!ref_detect.py
 
 !img2abs/
 !baselines/

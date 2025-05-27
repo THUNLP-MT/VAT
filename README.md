@@ -80,7 +80,29 @@ All services use Gradio and provide a web interface for image upload and abstrac
 
 ---
 
-## Tasks
+## Data
+
+You can download all task data from [Feishu Cloud](https://nankai.feishu.cn/drive/folder/APDKfGCbTlau9ydN0HscCPGSnge?from=from_copylink).
+After downloading, put all task folders under the `./tasks` directory.
+
+The structure should look like this:
+
+```
+./tasks/
+├── blink_spatial/
+├── blink_counting/
+├── blink_viscorr/
+├── blink_semcorr/
+├── blink_functional_correspondence/
+├── mme_commonsense_reasoning/
+├── mme_count/
+├── mme_existence/
+├── mme_position/
+├── mme_color/
+├── ooo/
+└── ...
+
+```
 
 ## Running Main Tasks
 
@@ -110,7 +132,7 @@ Replace `your_task` with the name of the task you want to run.
   - `gpt-4o`: gpt-4o-2024-11-20
   - `gemini`: gemini-2.0-pro-exp-02-05
 
-- `sk_type`: Specify the type of visual abstract. Options are:
+- `ABS_TYPE`: Specify the type of visual abstract. Options are:
   - `ps`: PhotoSketch
   - `open`: OpenSketch
   - `contour`: Contour style
@@ -119,14 +141,62 @@ Replace `your_task` with the name of the task you want to run.
 Example:
 
 ```bash
-MODEL=gpt-4o sk_type=open python run_task.py --task ooo
+MODEL=gpt-4o ABS_TYPE=open python run_task.py --task ooo
 ```
+
+### Supported Tasks and Benchmarks
+
+Our VAT framework supports a variety of tasks for visual perception and multimodal reasoning, covering different benchmarks. Below is a list of all available tasks and their corresponding benchmarks:
+
+| Task Name                        | Benchmark         |
+|----------------------------------|-------------------|
+| mme_existence                    | MME              |
+| mme_count                        | MME              |
+| mme_color                        | MME              |
+| mme_position                     | MME              |
+| mme_commonsense_reasoning        | MME              |
+| blink_counting                   | BLINK            |
+| blink_spatial                    | BLINK            |
+| blink_viscorr                    | BLINK            |
+| blink_semcorr                    | BLINK            |
+| blink_functional_correspondence  | BLINK            |
+| vd_illusion                      | HallusionBench   |
+| ooo                              | Odd-One-Out      |
+| direction                        | CoSpace          |
+| angle                            | CoSpace          |
+| dif-ang                          | CoSpace          |
+| diff                             | CoSpace          |
+
+These tasks cover object-centric perception, object relation reasoning, spatial reasoning, and commonsense reasoning.
 
 > **Note:** For the tasks `blink_viscorr`, `blink_semcorr`, and `blink_functional_correspondence`, you need to set the environment variable `ADD_DOT=1` to mark reference points in the visual abstract. For example:
 >
 > ```bash
-> ADD_DOT=1 MODEL=gpt-4o sk_type=open python run_task.py --task blink_viscorr
+> ADD_DOT=1 MODEL=gpt-4o ABS_TYPE=open python run_task.py --task blink_viscorr
 > ```
+
+## Evaluation
+
+You can use `calc.py` to evaluate the results of your tasks. The basic usage is:
+
+```bash
+python calc.py <outputs_folder_path> [--accp 0/1] [--abs_type <abstract_type>] [--model <model_name>]
+```
+
+- `<outputs_folder_path>`: Path to the folder containing the output results to be evaluated.
+- `--accp 0/1`: Whether to calculate the acc+ metric for MME tasks (set to 1 for acc+, 0 for standard accuracy).
+- `--abs_type <abstract_type>`: Specify the type of abstract to evaluate (e.g., `ps`, `open`, `contour`, `anime`).
+- `--model <model_name>`: Specify the model name to be evaluated (e.g., `gpt-4o`, `gemini`).
+
+**Example:**
+
+```bash
+python calc.py <outputs_folder_path> --accp 1 --abs_type open --model gpt-4o
+```
+
+This will evaluate all results in the `<outputs_folder_path>` folder, calculate acc+ for MME tasks, use the `open` abstract type, and specify the model as `gpt-4o`.
+
+> **Note:** `calc.py` can only be used to evaluate tasks other than the CoSpace benchmark.
 
 ---
 
