@@ -9,6 +9,7 @@
 !baselines/standard/*.py
 !baselines/*.sh
 !img2abs/
+!README.md
 *
 
 !.gitignore
