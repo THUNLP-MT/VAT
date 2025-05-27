@@ -7,6 +7,10 @@
 !run.sh
 
 !img2abs/
+!baselines/
+!baselines/cot/
+!baselines/standard/
+!vat/
 !img2abs/**
 
 !baselines/cot/*.py
@@ -16,3 +20,8 @@
 
 *.log
 *.pth
+
+!baselines/
+!baselines/cot/
+!baselines/standard/
+!vat/
