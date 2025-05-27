@@ -180,18 +180,18 @@ These tasks cover object-centric perception, object relation reasoning, spatial 
 You can use `calc.py` to evaluate the results of your tasks. The basic usage is:
 
 ```bash
-python calc.py <outputs_folder_path> [--accp 0/1] [--abs_type <abstract_type>] [--model <model_name>]
+python calc.py <outputs_folder_path> [--accp 0/1] [--abs-type <abstract_type>] [--model <model_name>]
 ```
 
 - `<outputs_folder_path>`: Path to the folder containing the output results to be evaluated.
 - `--accp 0/1`: Whether to calculate the acc+ metric for MME tasks (set to 1 for acc+, 0 for standard accuracy).
-- `--abs_type <abstract_type>`: Specify the type of abstract to evaluate (e.g., `ps`, `open`, `contour`, `anime`).
+- `--abs-type <abstract_type>`: Specify the type of abstract to evaluate (e.g., `ps`, `open`, `contour`, `anime`).
 - `--model <model_name>`: Specify the model name to be evaluated (e.g., `gpt-4o`, `gemini`).
 
 **Example:**
 
 ```bash
-python calc.py <outputs_folder_path> --accp 1 --abs_type open --model gpt-4o
+python calc.py <outputs_folder_path> --accp 1 --abs-type open --model gpt-4o
 ```
 
 This will evaluate all results in the `<outputs_folder_path>` folder, calculate acc+ for MME tasks, use the `open` abstract type, and specify the model as `gpt-4o`.

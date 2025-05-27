@@ -294,7 +294,7 @@ def main():
     global args
     parser = argparse.ArgumentParser(description="Calculate accuracy for task runs.")
     parser.add_argument("output_dir", type=str, help="output directory containing task runs")
-    parser.add_argument("--sk", type=str, default="", help="sketch type")
+    parser.add_argument("--abs-type", type=str, default="", help="visual abstract type")
     parser.add_argument("--accp", type=int, default=0, help="whether implement acc+(for MMEs)")
     parser.add_argument("--model", type=str, default="", help="model name")
     args = parser.parse_args()
@@ -310,7 +310,7 @@ def main():
         task_run_path = os.path.join(args.output_dir, task_run_name)
         
         if os.path.isdir(task_run_path):
-            if not args.sk in task_run_name:
+            if not args.abs_type in task_run_name:
                 continue
             log_path = get_log_path_from_output_dir(args.output_dir, task_run_name)
             runtime_minutes = None
