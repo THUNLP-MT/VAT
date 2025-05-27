@@ -1,0 +1,14 @@
+!calc.py
+
+*.log
+*.pth
+
+!img2abs/*.py
+!baselines/cot/*.py
+!vat/*.py
+!baselines/standard/*.py
+!baselines/*.sh
+!img2abs/
+*
+
+!.gitignore
