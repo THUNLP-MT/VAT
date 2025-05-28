@@ -22,6 +22,10 @@ Chi Chen<sup>1</sup>, Peng Li<sup>2 :envelope:</sup>, Yang Liu<sup>1,2 :envelope
 
 </div>
 
+## 📢📢📢News
+1. [26-May-2025] Repo and arxiv released
+
+
 ## Introduction
 
 Images usually convey richer detail than text, but often include redundant information which potentially downgrades multimodal reasoning performance. When faced with lengthy or complex messages, humans tend to employ abstract thinking to convert them into simple and concise abstracts. Inspired by this cognitive strategy, we introduce **V**isual **A**bstract **T**hinking (**VAT**), a novel thinking paradigm that prompts Multimodal Large Language Models (MLLMs) with visual abstract instead of explicit verbal thoughts or elaborate guidance, permitting a more concentrated visual reasoning mechanism. 
