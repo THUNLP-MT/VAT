@@ -5,12 +5,11 @@
 <img src="https://visitor-badge.laobi.icu/badge?page_id=THUNLP-MT/VAT" alt="visitors">
 
 
-Dairu Liu<sup>3\*</sup>, Ziyue Wang<sup>1\* :beginner:</sup>, Minyuan Ruan<sup>1\*</sup>, Fuwen Luo<sup>1</sup>,  
-Chi Chen<sup>1</sup>, Peng Li<sup>2 :envelope:</sup>, Yang Liu<sup>1,2 :envelope:</sup>
+Dairu Liu<sup>2\*</sup>, Ziyue Wang<sup>1\* :beginner:</sup>, Minyuan Ruan<sup>1\*</sup>, Fuwen Luo<sup>1</sup>,  
+Chi Chen<sup>1</sup>, Peng Li<sup>1 :envelope:</sup>, Yang Liu<sup>1 :envelope:</sup>
 
 <sup>1</sup>Dept. of Computer Science & Technology, Institute for AI, Tsinghua University, Beijing, China  
-<sup>2</sup>Institute for AI Industry Research (AIR), Tsinghua University, Beijing, China  
-<sup>3</sup>College of Software, Nankai University, Tianjin, China  
+<sup>2</sup>College of Software, Nankai University, Tianjin, China  
 
 <sup>*</sup>Equal contribution  
 <sup>:beginner:</sup>Project lead  
