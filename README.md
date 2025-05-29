@@ -22,7 +22,8 @@ Chi Chen<sup>1</sup>, Peng Li<sup>1 :envelope:</sup>, Yang Liu<sup>1 :envelope:<
 </div>
 
 ## 📢📢📢News
-1. [26-May-2025] Repo and arxiv released
+1. [TODO: More interesting cases are on the way]
+2. [26-May-2025] Repo and arxiv released
 
 
 ## Introduction
